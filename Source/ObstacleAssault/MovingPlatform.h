@@ -31,16 +31,18 @@ private:
 	float m_multiplier{1};
 
 	// New approach
-	UPROPERTY(EditAnywhere, Category="CUbach Category")
+	UPROPERTY(EditAnywhere, Category="Move")
 	FVector PlatformVelocity = FVector(500, 0, 0);
 
 	// Only cpp property
 	FVector StartLocation;
 
-	UPROPERTY(VisibleAnywhere, Category="CUbach Category")
+	UPROPERTY(VisibleAnywhere, Category="Move")
 	double DistanceMoved{0};   // Distance we currently moved
-	UPROPERTY(EditAnywhere, Category="CUbach Category")
+	UPROPERTY(EditAnywhere, Category="Move")
 	double MoveDistance{500};  // Maximum move distance
+	UPROPERTY(EditAnywhere, Category="Rotate")
+	FRotator RotationVelocity = FRotator(0, 0, 0);
 
 	void MovePlatform(float DeltaTime);
 
